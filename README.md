@@ -10,9 +10,10 @@ Build a small application that fetches and updates the Federal Reserve's current
 
 ## Resources
 
-Bank Data:  https://www.fededirectory.frb.org/FedACHdir.txt (you aren't imagining things, the Fed doesn't have a valid SSL Cert for this server!!!)
+Bank Data:  http://www.fededirectory.frb.org/FedACHdir.txt
 
 Truncated Bank Data: https://gist.github.com/jakehow/3d96b83c4a4a1e6313d4/raw/f2990b4cef86fe9454ba1a643ccee118ca0b5757/truncated_list
+
 *This is the first 100 lines of the file, much easier to deal with if you are requesting it a lot.
 
 ## Getting Started
