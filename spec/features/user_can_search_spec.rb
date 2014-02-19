@@ -16,6 +16,6 @@ describe "any user can search by routing number" do
     visit root_path
     fill_in "Routing Number", with: ch.routing_number
     click_on "Search"
-    expect(page).to have_content "#{ch.name}"
+    expect(page).to have_content "Federal Reserve Bank"
   end
 end
