@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rolentle/zipmark-code-challenge.png?branch=master)](https://travis-ci.org/rolentle/zipmark-code-challenge)
+[![Coverage Status](https://coveralls.io/repos/rolentle/zipmark-code-challenge/badge.png)](https://coveralls.io/r/rolentle/zipmark-code-challenge)
 [![Code Climate](https://codeclimate.com/github/rolentle/zipmark-code-challenge.png)](https://codeclimate.com/github/rolentle/zipmark-code-challenge)
 
 ## Welcome
