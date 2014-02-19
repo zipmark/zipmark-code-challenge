@@ -1,4 +1,6 @@
 Zipmark::Application.routes.draw do
+  resources :clearing_houses, :path => "banks", :defaults => {:format => "json"}
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
