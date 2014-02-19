@@ -15,7 +15,7 @@ describe ClearingHousesController do
 		    zip_code: "30309",
 		    clearing_house_id: ch.id)
 
-    get :show, format: :json, routing_number: ch.routing_number
+    get :show, format: :json, id: ch.routing_number
     expect(response.status).to eq 200
     expect(response.body).to include "FEDERAL RESERVE BANK"
     expect(response.body).to include "ATLANTA"

@@ -13,7 +13,7 @@ describe ClearingHouseFormatter do
 		   zip_code: "30309",
 		   clearing_house_id: ch.id)
 
-    ch_out = ClearingHouseFormatter.format(ch)
+    ch_out = ClearingHouseFormatter.execute(ch)
 
     expect(ch_out["name"]).to eq "FEDERAL RESERVE BANK"
     expect(ch_out["address"]["city"]).to eq "ATLANTA"

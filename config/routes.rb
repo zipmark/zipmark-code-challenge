@@ -1,5 +1,6 @@
 Zipmark::Application.routes.draw do
-  get "clearing_houses/:routing_number" => "clearing_houses#show"
+  resources :clearing_houses, :defaults => {:format => "json"}
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

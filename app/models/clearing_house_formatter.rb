@@ -1,5 +1,5 @@
 class ClearingHouseFormatter
-  def self.format(clearing_house)
+  def self.execute(clearing_house)
     ch_attributes = desired_attributes(clearing_house)
 
 
