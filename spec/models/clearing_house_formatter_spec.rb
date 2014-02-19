@@ -15,8 +15,8 @@ describe ClearingHouseFormatter do
 
     ch_out = ClearingHouseFormatter.execute(ch)
 
-    expect(ch_out["name"]).to eq "FEDERAL RESERVE BANK"
-    expect(ch_out["address"]["city"]).to eq "ATLANTA"
+    expect(ch_out["name"]).to eq "Federal Reserve Bank"
+    expect(ch_out["address"]["city"]).to eq "Atlanta"
     expect(ch_out["created_at"]).to be_nil
   end
 
