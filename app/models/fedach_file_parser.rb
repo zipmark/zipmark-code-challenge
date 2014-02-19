@@ -4,7 +4,7 @@ class FedachFileParser
     @response_body = Faraday.get(url).body
   end
 
-  def create_clearing_houses_params
+  def create_clearing_houses
     response_body.split("\n").each do |line|
       FedachFileWriter.create_clearing_house(to_hash(line))
     end
