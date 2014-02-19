@@ -8,8 +8,8 @@
 
 ### Features Finshed
 
-* Api endpoints to at '/banks/:routing_number' see `curl http://rolen-zipmark.herokuapp.com/banks/011000015` as an example.
-* Deployed to Heroku [link to heroku](http://rolen-zipmark.herokuapp.com/)
+* Api endpoints at '/banks/:routing_number' see `curl http://rolen-zipmark.herokuapp.com/banks/011000015` as an example.
+* Deployed to [Heroku](http://rolen-zipmark.herokuapp.com/).
 * Created a rake task `rake fedach:update` that could be added to heroku scheduler to update the data.
 * Created a search engine as the root page.
 
