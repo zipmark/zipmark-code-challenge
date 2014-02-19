@@ -30,6 +30,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/rolenle/Projects/gschool/ruby/code-challenge/zipmark-code-challenge/app/models/address.rb": [
@@ -154,6 +158,6 @@
         null
       ]
     },
-    "timestamp": 1392831711
+    "timestamp": 1392832726
   }
 }

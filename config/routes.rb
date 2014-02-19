@@ -1,5 +1,7 @@
 Zipmark::Application.routes.draw do
   resources :clearing_houses, :path => "banks", :defaults => {:format => "json"}
+  resources :search
+  get '/search-results' => "search#show"
   root "search#new"
 
   # The priority is based upon order of creation: first created -> highest priority.
