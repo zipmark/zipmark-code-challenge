@@ -4,9 +4,9 @@ class FedachFileParser
     @response_body = Faraday.get(url).body
   end
 
-  def find_or_create_clearing_houses
+  def create_clearing_houses
     response_body.split("\n").each do |line|
-      find_or_create_clearing_house(line)
+      FedachFileWriter.create_clearing_house(to_hash(line))
     end
   end
 
@@ -28,9 +28,11 @@ class FedachFileParser
     }
   end
 
-  def find_or_create_clearing_house(line)
-    clearing_house = ClearingHouse.find_or_create_by(clearing_house_attributes(line))
-    clearing_house_address_attributes = address_attributes(line).merge(clearing_house_id: clearing_house.id)
-    Address.find_or_create_by(clearing_house_address_attributes)
+  def to_hash(line)
+    clearing_house = clearing_house_attributes(line)
+    address = address_attributes(line)
+
+    { clearing_house: clearing_house,
+      address: address }
   end
 end

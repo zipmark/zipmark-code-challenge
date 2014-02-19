@@ -9,23 +9,7 @@ describe FedachFileParser do
 
   let(:line) { "011000015O0110000150020802000000000FEDERAL RESERVE BANK                1000 PEACHTREE ST N.E.              ATLANTA             GA303094470866234568111
 	       "}
-  it "creates  clearing house attributes" do
-    attributes = file_parser.clearing_house_attributes(line)
 
-    expect(attributes[:name]).to eq "FEDERAL RESERVE BANK"
-    expect(attributes[:routing_number]).to eq "011000015"
-    expect(attributes[:record_type]).to eq "0"
-    expect(attributes[:phone_number]).to eq "8662345681"
-  end
-
-  it "creates address attributes" do
-    address = file_parser.address_attributes(line)
-
-    expect(address[:street]).to eq "1000 PEACHTREE ST N.E."
-    expect(address[:city]).to eq "ATLANTA"
-    expect(address[:state]).to eq "GA"
-    expect(address[:zip_code]).to eq "30309"
-  end
 
   let(:line2) {  "011110743B0110000151061010000000000THE CITIZENS NATIONAL BANK          182 MAIN ST, PO BOX 6002            PUTNAM              CT062600000860928792111
   " }
@@ -39,23 +23,20 @@ describe FedachFileParser do
     expect(address[:zip_code]).to eq "06260"
   end
 
-  it "creates 100 clearing houses in the database" do
-    original_amount = ClearingHouse.count
-    address_amount = Address.count
-    file_parser.find_or_create_clearing_houses
+  it "can make an hash for clearing house and address" do
+    hash = file_parser.to_hash(line)
+    attributes = hash[:clearing_house]
+    address = hash[:address]
 
-    clearing_house = ClearingHouse.first
-    expect(clearing_house.name).to eq "FEDERAL RESERVE BANK"
-    expect(clearing_house.routing_number).to eq "011000015"
-    expect(clearing_house.record_type).to eq "0"
-    expect(clearing_house.phone_number).to eq "8662345681"
+    expect(attributes[:name]).to eq "FEDERAL RESERVE BANK"
+    expect(attributes[:routing_number]).to eq "011000015"
+    expect(attributes[:record_type]).to eq "0"
+    expect(attributes[:phone_number]).to eq "8662345681"
 
-    address = clearing_house.address
-    expect(address.street).to eq "1000 PEACHTREE ST N.E."
-    expect(address.city).to eq "ATLANTA"
-    expect(address.state).to eq "GA"
-    expect(address.zip_code).to eq "30309"
-    expect(ClearingHouse.count).to eq (original_amount + 100)
-    expect(Address.count).to eq (address_amount + 100)
+    expect(address[:street]).to eq "1000 PEACHTREE ST N.E."
+    expect(address[:city]).to eq "ATLANTA"
+    expect(address[:state]).to eq "GA"
+    expect(address[:zip_code]).to eq "30309"
   end
 end
+

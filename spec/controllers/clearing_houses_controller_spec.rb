@@ -17,8 +17,8 @@ describe ClearingHousesController do
 
     get :show, format: :json, id: ch.routing_number
     expect(response.status).to eq 200
-    expect(response.body).to include "FEDERAL RESERVE BANK"
-    expect(response.body).to include "ATLANTA"
+    expect(response.body).to include "Federal Reserve Bank"
+    expect(response.body).to include "Atlanta"
     expect(response.body).not_to include ch.created_at.to_s
   end
 
