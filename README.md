@@ -1,8 +1,11 @@
+[![Build Status](https://travis-ci.org/rolentle/zipmark-code-challenge.png?branch=master)](https://travis-ci.org/rolentle/zipmark-code-challenge)
+[![Code Climate](https://codeclimate.com/github/rolentle/zipmark-code-challenge.png)](https://codeclimate.com/github/rolentle/zipmark-code-challenge)
+
 ## Welcome
 
 If you are reading this, you probably have interviewed or chatted with someone on the team at Zipmark.  This is our standard "toy" project we normally like to work on together to see how you think about problems, model them, and make decisions.  If you stumbled upon this project randomly and want to give it a shot, please feel free to fork the project and hack away.  We would love to see what you come up with.
 
-An initial version of this project should be doable in a short amount of time (we usually do coding sessions for less than half a day with interviewees), but has many facets that could be improved beyond that inital cut. 
+An initial version of this project should be doable in a short amount of time (we usually do coding sessions for less than half a day with interviewees), but has many facets that could be improved beyond that inital cut.
 
 ## Objective
 
@@ -26,7 +29,7 @@ Truncated Bank Data: https://gist.github.com/jakehow/3d96b83c4a4a1e6313d4/raw/f2
 
 `curl http://hostname/banks/123456789`
 
-Output: 
+Output:
 
 ```json
 {
