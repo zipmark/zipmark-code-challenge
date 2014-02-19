@@ -6,4 +6,11 @@ describe FedachFileParser do
   it "should have a response body" do
     expect(file_parser.response_body).not_to be_nil
   end
+
+  it "creates 100 clearing houses in the database" do
+    original_amount = ClearingHouse.count
+    file_parser.find_or_create_clearing_houses
+
+    expect(ClearingHouse.count). to eq (original_amount + 100)
+  end
 end
