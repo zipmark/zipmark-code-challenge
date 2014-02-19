@@ -1,4 +1,5 @@
 Zipmark::Application.routes.draw do
+  get "clearing_houses/:routing_number" => "clearing_houses#show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
