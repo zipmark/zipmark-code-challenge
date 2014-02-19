@@ -1,0 +1,20 @@
+<%=  render "search_form" %>
+<br />
+<% if @clearing_house %>
+  Name: <%= @clearing_house.name.titleize %><br />
+  Routing Number: <%= @clearing_house.routing_number %><br/>
+  Record Type: <%= record_types[@clearing_house.record_type] %><br/>
+  Phone Number: <%= format_phone_number(@clearing_house.phone_number) %><br />
+  <br/>
+  Address
+  <br/>
+  Street: <%= @clearing_house.address.street.titleize %><br/>
+  <% if @clearing_house.address.street2 %>
+    Street 2: <%= @clearing_house.address.street2.titleize %><br/>
+  <% end %>
+  City: <%= @clearing_house.address.city.titleize %><br/>
+  State: <%= @clearing_house.address.state %><br />
+  Zip Code: <%= @clearing_house.address.zip_code %><br/>
+<% else %>
+  <p>No Results Found.</p>
+<% end %>

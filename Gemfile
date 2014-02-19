@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :test do
   gem 'sqlite3'
+  gem 'capybara'
 end
 
 group :development,:production do

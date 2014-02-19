@@ -1,0 +1,5 @@
+<%= form_tag("/search-results", method: "get") do %>
+  <%= label_tag(:routing_number, "Routing Number") %>
+  <%= text_field_tag(:routing_number) %>
+  <%= submit_tag("Search") %>
+<% end %>
