@@ -6,9 +6,7 @@ class FedachFileParser
 
   def find_or_create_clearing_houses
     response_body.split("\n").each do |line|
-      clearing_house = ClearingHouse.find_or_create_by(clearing_house_attributes(line))
-      clearing_house_address_attributes = address_attributes(line).merge(clearing_house_id: clearing_house.id)
-      Address.find_or_create_by(clearing_house_address_attributes)
+      find_or_create_clearing_house(line)
     end
   end
 
@@ -28,5 +26,11 @@ class FedachFileParser
       state: line[127..128],
       zip_code: line[129..133]
     }
+  end
+
+  def find_or_create_clearing_house(line)
+    clearing_house = ClearingHouse.find_or_create_by(clearing_house_attributes(line))
+    clearing_house_address_attributes = address_attributes(line).merge(clearing_house_id: clearing_house.id)
+    Address.find_or_create_by(clearing_house_address_attributes)
   end
 end
