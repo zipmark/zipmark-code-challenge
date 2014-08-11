@@ -28,7 +28,7 @@ class DataProcessor
   end
 
   def banks_hash(banks_array)
-    ##### note: this method could be folded into the above so that you only iterate through the data once
+    ##### note: this method could be folded into the above method so that you only iterate through the data once
     # which would become especially important the larger the data set
 
 
