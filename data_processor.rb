@@ -1,4 +1,4 @@
-require_relative 'main_helper'
+require_relative 'data_processor_helper'
 
 class DataProcessor
 
