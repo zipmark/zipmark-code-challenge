@@ -1,12 +1,4 @@
 module ProcessMethods
-  
-  def shovel_for(array, num_of_chars)
-    arr = []
-    for i in (0..3) 
-      arr << array[start_index + i]
-    end
-    return arr
-  end
 
   def array_splitter(array, num_of_chars)
     puts "FACTORING ERROR" and return unless array.length % num_of_chars == 0
