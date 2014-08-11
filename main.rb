@@ -18,8 +18,6 @@ get "/banks" do
 
   @banks.to_json
  
-  # erb :"banks/index"
-
 end
 
 get "/banks/:id" do
@@ -31,7 +29,5 @@ get "/banks/:id" do
   @bank = processed_data.search(routing_number)
 
   @bank.to_json
-
-  # erb :"banks/show"
 
 end
