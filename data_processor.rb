@@ -14,12 +14,11 @@ class DataProcessor
   def banks_array(info)
     banks_array = []
     
-    # converts one large string into 100 different strings by bank of certain length
-    # 156 provides the length, which is the number of characters 
-    # associated with a bank string in the raw data
+    # converts one large string into 100 different strings of certain length by bank 
+    # 156 the character length of each bank string in the raw data
     banks_as_strings = array_of_strings(info.split(""), 156)
 
-    # break info string into elements in an array by bank
+    # break info string into elements of an array by bank
     banks_as_strings.each do |bank_as_string|
       chars = bank_as_string.split("")
       banks_array << [chars[0..70].join, chars[71..106].join, chars[107..126].join, chars[127..156].join]
@@ -29,9 +28,11 @@ class DataProcessor
   end
 
   def banks_hash(banks_array)
-    # parse data, using string length as the limiting pattern
-    # this method could be folded into the above so that you only iterate through the data once
+    ##### note: this method could be folded into the above so that you only iterate through the data once
     # which would become especially important the larger the data set
+
+
+    # parse data using patterns in string length
     banks = {}
     banks_array.each do |bank|
       banks[bank[0].split("")[0..8].join] = {
