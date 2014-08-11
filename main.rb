@@ -33,7 +33,21 @@ get "/banks" do
   #   zip_code: "10010"
   # }
 # }
-
+  banks = []
+  bankers.each do |bank|
+    banks << {name: bank[0].split("")[35..70].join.strip, 
+      routing_number: bank[0].split("")[0..8].join,
+      record_type: "string",
+      address: {
+        street: before_comma(bank[1]), 
+        street_2: after_comma(bank[1]),
+        city: bank[2].strip,
+        state: bank[3].split("")[0..1].join,
+        zip_code: bank[3].split("")[2..6].join
+      }
+    }
+  end
+  binding.pry
   
   # take 71 characts to be converted into values of data hash keys
   # take 85 characts to be converted into values of data hash keys

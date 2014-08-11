@@ -30,4 +30,12 @@ module ProcessMethods
     return arr
   end
 
+  def before_comma(array)
+    /.*,/.match(array) ? /.*,/.match(array)[0] : array.strip
+  end
+
+  def after_comma(array)
+    /,.*/.match(array)[0].match(/[^,].*/)[0].strip if /,.*/.match(array)
+  end
+
 end
