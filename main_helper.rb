@@ -30,4 +30,8 @@ module ProcessMethods
     /,.*/.match(array)[0].match(/[^,].*/)[0].strip if /,.*/.match(array)
   end
 
+  def telephone_number(array)
+    array.split("")[11..20].insert(3, "-").insert(7, "-").join
+  end
+
 end

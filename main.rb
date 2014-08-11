@@ -30,6 +30,7 @@ get "/banks" do
       name: bank[0].split("")[35..70].join.strip, 
       routing_number: bank[0].split("")[0..8].join,
       record_type: "string",
+      telephone_number: telephone_number(bank[3]),
       address: {
         street: before_comma(bank[1]), 
         street_2: after_comma(bank[1]),
@@ -68,6 +69,7 @@ get "/banks/:id" do
       name: bank[0].split("")[35..70].join.strip, 
       routing_number: bank[0].split("")[0..8].join,
       record_type: "string",
+      telephone_number: telephone_number(bank[3]),
       address: {
         street: before_comma(bank[1]), 
         street_2: after_comma(bank[1]),
