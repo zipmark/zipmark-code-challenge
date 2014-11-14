@@ -64,4 +64,60 @@ class BanksReader
     bank_hash
   end
 
+ def self.parse_for_updates
+   banks = self.ach_dir
+   banks = self.hash_banks(banks)
+   banks_for_update = self.changed_banks(banks)
+   banks_for_adding = self.new_banks(banks)
+   self.delete_banks(banks)
+   self.update_banks(banks_for_update)
+   self.add_banks(banks_for_adding)
+ end
+
+ def self.changed_banks(banks_array)
+  now = Time.now
+  need_updating = []
+  banks_array.each do |bank_hash|
+    date = bank_hash[:change_date][4..5] << bank_hash[:change_date][0..1] << bank_hash[:change_date][2..3]
+    next unless Time.parse(date) > Time.now - 1.month
+    need_updating << self.format_bank(bank_hash)
+  end
+  need_updating
+ end
+
+ def self.new_banks(banks_array)
+  stored_routing_numbers = Bank.pluck(:routing_number)
+  need_adding = []
+  banks_array.each do |bank_hash|
+    next if stored_routing_numbers.include?(bank_hash[:routing_number])
+    need_adding << self.format_bank(bank_hash)
+  end
+  need_adding
+ end
+
+ def self.delete_banks(banks_array)
+  stored_routing_numbers = Bank.pluck(:routing_number)
+  listed_routing_numbers = []
+  banks_array.each { |bank_hash| listed_routing_numbers << bank_hash[:routing_number] }
+  stored_routing_numbers.each do |routing_number|
+    unless listed_routing_numbers.include?(routing_number)
+      Bank.where(routing_number: routing_number).destroy_all
+    end
+  end
+ end
+
+ def self.update_banks(formatted_banks)
+   formatted_banks.each do |bank_hash|
+     bank = Bank.find_by(routing_number: bank_hash[:routing_number] )
+     bank.update(bank_hash)
+   end
+ end
+
+ def self.add_banks(formatted_banks)
+   formatted_banks.each do |bank_hash|
+     bank = Bank.create(bank_hash)
+     bank.update(bank_hash)
+   end
+ end
+
 end
