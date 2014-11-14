@@ -5,7 +5,7 @@ class BanksReader
     routing_number: 0..8,
     record_type: 19,
     change_date: 20..25,
-    updated_routing: 26..34,
+    updated_routing_number: 26..34,
     name: 35..70,
     address: 71..106,
     city: 107..126,
@@ -58,7 +58,7 @@ class BanksReader
   end
 
   def self.set_updated_routing(bank_hash)
-    bank_hash[:updated_routing] = nil if bank_hash[:updated_routing] == "000000000"
+    bank_hash[:updated_routing_number] = nil if bank_hash[:updated_routing_number] == "000000000"
     bank_hash
   end
 
