@@ -87,6 +87,13 @@ class BanksReader
  end
 
  def self.new_banks(banks_array)
+  stored_routing_numbers = Bank.pluck(:routing_number)
+  need_adding = []
+  banks_array.each do |bank_hash|
+    next if stored_routing_numbers.include?(bank_hash[:routing_number])
+    need_adding << self.format_bank(bank_hash)
+  end
+  need_adding
  end
 
  def self.deleted_banks(banks_array)
@@ -100,6 +107,10 @@ class BanksReader
  end
 
  def self.add_banks(formatted_banks)
+   formatted_banks.each do |bank_hash|
+     bank = Bank.create(bank_hash)
+     bank.update(bank_hash)
+   end
  end
 
  def self.delete_banks(formatted_banks)
