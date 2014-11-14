@@ -34,6 +34,7 @@ class BanksReader
   end
 
   def self.format_bank(bank_hash)
+    bank_hash.delete(:change_date)
     bank_hash = self.establish_streets(bank_hash)
     bank_hash = self.establish_record_type(bank_hash)
     bank_hash = self.set_updated_routing(bank_hash)
@@ -48,6 +49,7 @@ class BanksReader
       else
         bank_hash[:street_optional] = nil
       end
+      bank_hash.delete(:address)
       bank_hash
     end
   end
