@@ -76,6 +76,14 @@ class BanksReader
  end
 
  def self.changed_banks(banks_array)
+  now = Time.now
+  need_updating = []
+  banks_array.each do |bank_hash|
+    date = bank_hash[:change_date][4..5] << bank_hash[:change_date][0..1] << bank_hash[:change_date][2..3]
+    next unless Time.parse(date) > Time.now - 1.month
+    need_updating << self.format_bank(bank_hash)
+  end
+  need_updating
  end
 
  def self.new_banks(banks_array)
@@ -85,6 +93,10 @@ class BanksReader
  end
 
  def self.update_banks(formatted_banks)
+   formatted_banks.each do |bank_hash|
+     bank = Bank.find_by(routing_number: bank_hash[:routing_number] )
+     bank.update(bank_hash)
+   end
  end
 
  def self.add_banks(formatted_banks)
