@@ -64,4 +64,34 @@ class BanksReader
     bank_hash
   end
 
+ def self.parse_for_updates
+   banks = self.ach_dir
+   banks = self.hash_banks(banks)
+   banks_for_update = self.changed_banks(banks)
+   banks_for_adding = self.new_banks(banks)
+   banks_for_deletion = self.deleted_banks(banks)
+   self.update_banks(banks_for_update)
+   self.add_banks(banks_for_adding)
+   self.delete_banks(banks_for_deletion)
+ end
+
+ def self.changed_banks(banks_array)
+ end
+
+ def self.new_banks(banks_array)
+ end
+
+ def self.deleted_banks(banks_array)
+ end
+
+ def self.update_banks(formatted_banks)
+ end
+
+ def self.add_banks(formatted_banks)
+ end
+
+ def self.delete_banks(formatted_banks)
+ end
+
+
 end
