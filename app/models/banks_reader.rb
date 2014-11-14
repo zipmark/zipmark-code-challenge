@@ -17,7 +17,7 @@ class BanksReader
     text = URI.parse(url).read.split("\n")
   end
 
-  def self.hash_banks(banks_array, options= default_specs)
+  def self.hash_banks(banks_array, options= @@default_specs)
     output = banks_array.map do |listing|
       bank_options = options.dup
       bank_options.each  do |key, value|
