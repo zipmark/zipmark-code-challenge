@@ -27,4 +27,16 @@ class BanksReader
     end
   end
 
+  def self.format_bank(bank_hash)
+    bank_hash = self.establish_streets(bank_hash)
+    bank_hash = self.establish_record_type(bank_hash)
+  end
+
+  def self.establish_streets(bank_hash)
+  end
+
+  def self.establish_record_type(bank_hash)
+  end
+
+
 end
