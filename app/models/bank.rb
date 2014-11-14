@@ -19,7 +19,7 @@ class Bank < ActiveRecord::Base
     response[:address][:street] = street
     response[:address][:street_2] = street_optional unless street_optional.nil?
     response[:address][:city] = city
-    response[:address][:state] = city unless state.nil?
+    response[:address][:state] = state unless state.nil?
     response[:address][:zip_code] = zip_code
     response[:updated_routing_number] = updated_routing_number unless updated_routing_number.nil?
     response
