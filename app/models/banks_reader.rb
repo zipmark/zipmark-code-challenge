@@ -33,6 +33,16 @@ class BanksReader
   end
 
   def self.establish_streets(bank_hash)
+    if bank_hash[:address]
+      street_array = bank_hash[:address].split(",")
+      bank_hash[:street] = street_array[0]
+      if street_array[1]
+        bank_hash[:street_optional] = street_array[1]
+      else
+        bank_hash[:street_optional] = nil
+      end
+      bank_hash
+    end
   end
 
   def self.establish_record_type(bank_hash)
