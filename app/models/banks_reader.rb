@@ -36,6 +36,7 @@ class BanksReader
   def self.format_bank(bank_hash)
     bank_hash = self.establish_streets(bank_hash)
     bank_hash = self.establish_record_type(bank_hash)
+    bank_hash = self.set_updated_routing(bank_hash)
   end
 
   def self.establish_streets(bank_hash)
@@ -53,6 +54,11 @@ class BanksReader
 
   def self.establish_record_type(bank_hash, record_values= @@record_values)
     bank_hash[:record_type] = record_values[bank_hash[:record_type].to_i]
+    bank_hash
+  end
+
+  def self.set_updated_routing(bank_hash)
+    bank_hash[:updated_routing] = nil if bank_hash[:updated_routing] == "000000000"
     bank_hash
   end
 
