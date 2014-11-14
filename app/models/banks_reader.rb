@@ -13,6 +13,12 @@ class BanksReader
     zip_code: 129..133
   }
 
+  @@record_values = {
+      0 => "Institution is a Federal Reserve Bank",
+      1 => "Send items to customer routing number",
+      2 => "Send items to customer using new routing number field"
+    }
+
   def self.ach_dir(url= "http://www.fededirectory.frb.org/FedACHdir.txt")
     text = URI.parse(url).read.split("\n")
   end
@@ -45,8 +51,9 @@ class BanksReader
     end
   end
 
-  def self.establish_record_type(bank_hash)
+  def self.establish_record_type(bank_hash, record_values= @@record_values)
+    bank_hash[:record_type] = record_values[bank_hash[:record_type].to_i]
+    bank_hash
   end
-
 
 end
