@@ -25,18 +25,3 @@ class Bank < ActiveRecord::Base
     response
   end
 end
-
-
-{
-  name: "First Bank of Zipmark",
-  routing_number: "123456789",
-  record_type: "Record Type",
-  phone_number: "212-555-1212",
-  address: {
-    street: "56 W 22nd St",
-    street_2: "9th Floor",
-    city: "New York",
-    state: "NY",
-    zip_code: "10010"
-  }
-}

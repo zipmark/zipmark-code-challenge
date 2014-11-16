@@ -6,7 +6,7 @@ FactoryGirl.define do
                  "Send items to customer routing number",
                  "Send items to customer using new routing number field"].sample
     street Faker::Address.street_address
-    street_optional Faker::Address.secondary_address #=> "Apt. 672"
+    street_optional Faker::Address.secondary_address
     city Faker::Address.city
     state Faker::Address.state
     zip_code Faker::Address.zip_code
