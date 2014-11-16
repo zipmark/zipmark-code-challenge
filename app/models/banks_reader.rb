@@ -4,6 +4,7 @@ class BanksReader
   @@default_specs = {
     routing_number: 0..8,
     record_type: 19,
+    phone_number: 138..147,
     change_date: 20..25,
     updated_routing_number: 26..34,
     name: 35..70,
@@ -38,6 +39,7 @@ class BanksReader
     bank_hash = self.establish_streets(bank_hash)
     bank_hash = self.establish_record_type(bank_hash)
     bank_hash = self.set_updated_routing(bank_hash)
+    bank_hash = self.set_phone_number(bank_hash)
   end
 
   def self.establish_streets(bank_hash)
@@ -61,6 +63,11 @@ class BanksReader
 
   def self.set_updated_routing(bank_hash)
     bank_hash[:updated_routing_number] = nil if bank_hash[:updated_routing_number] == "000000000"
+    bank_hash
+  end
+
+  def self.set_phone_number(bank_hash)
+    bank_hash[:phone_number].insert(3,"-").insert(7,"-")
     bank_hash
   end
 
