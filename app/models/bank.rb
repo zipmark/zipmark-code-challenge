@@ -15,6 +15,7 @@ class Bank < ActiveRecord::Base
     response[:name] = name
     response[:routing_number] = routing_number
     response[:record_type] = record_type
+    response[:phone_number] = phone_number
     response[:address] = {}
     response[:address][:street] = street
     response[:address][:street_2] = street_optional unless street_optional.nil?
