@@ -5,6 +5,7 @@ FactoryGirl.define do
     record_type ["Institution is a Federal Reserve Bank",
                  "Send items to customer routing number",
                  "Send items to customer using new routing number field"].sample
+    phone_number Faker::PhoneNumber.phone_number
     street Faker::Address.street_address
     street_optional Faker::Address.secondary_address
     city Faker::Address.city
