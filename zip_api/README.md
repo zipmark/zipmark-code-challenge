@@ -1,15 +1,44 @@
 #ZipAPI
 
-#considering it's using sqlite you might be able to turn on server and just run tests
-#before I do a PR I'll reset the DB so it's like a brand new app
-#and clone and test remotely on a differnt server/env etc
+considering it's using sqlite you might be able to turn on server and just run tests
+before I do a PR I'll reset the DB so it's like a brand new app
+and clone and test remotely on a differnt server/env etc
 
 ```bash
 cd zip_api
-rake db:create
-rake db:migrate
-rake db:seed
-./script/all.bash #will run a curl request for each routing number found in the truncated list
+bundle
+rake db:setup
+./script/all.bash 
+```
+
+output:
+```
+{
+    "address": {
+        "city": "LYNN",
+        "state": "MA",
+        "street": "195 MARKET STREET",
+        "street_2": "",
+        "zip": "01901"
+    },
+    "name": "EASTERN BANK",
+    "phone_number": "800-327-8376",
+    "record_type": "Record Type",
+    "routing_number": "011301604"
+}
+{
+    "address": {
+        "city": "RICHMOND",
+        "state": "VA",
+        "street": "PO BOX 27025",
+        "street_2": "",
+        "zip": "23261"
+    },
+    "name": "BANK OF AMERICA N.A.",
+    "phone_number": "800-446-0135",
+    "record_type": "Record Type",
+    "routing_number": "011301646"
+}
 ```
 
 
