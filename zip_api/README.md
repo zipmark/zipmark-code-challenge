@@ -1,8 +1,7 @@
 #ZipAPI
 
-considering it's using sqlite you might be able to turn on server and just run tests
-before I do a PR I'll reset the DB so it's like a brand new app
-and clone and test remotely on a differnt server/env etc
+
+configure:
 
 ```bash
 cd zip_api
@@ -12,7 +11,7 @@ rake db:setup
 ```
 
 output:
-```
+```json
 {
     "address": {
         "city": "LYNN",
