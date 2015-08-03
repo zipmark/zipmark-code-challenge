@@ -14,7 +14,15 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+ENV["RAILS_ENV"] ||= 'test'
+require File.expand_path("../../config/environment", __FILE__)
+require 'rspec/rails'
+require 'factory_girl_rails'
+
 RSpec.configure do |config|
+  config.include FactoryGirl::Syntax::Methods
+  config.render_views
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
