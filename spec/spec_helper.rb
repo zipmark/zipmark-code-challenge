@@ -19,6 +19,7 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'factory_girl_rails'
+require 'vcr'
 
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
@@ -44,6 +45,12 @@ RSpec.configure do |config|
     # a real object. This is generally recommended, and will default to
     # `true` in RSpec 4.
     mocks.verify_partial_doubles = true
+  end
+
+  VCR.configure do |c|
+    c.cassette_library_dir = 'fixtures/vcr_cassettes'
+    c.default_cassette_options = { record: :new_episodes}
+    c.hook_into :webmock
   end
 
 # The settings below are suggested to provide a good initial experience

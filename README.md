@@ -1,3 +1,7 @@
+## Ambi Sidhu
+* Please note that data will be imported when the server comes up, do to an inititalizer that runs the seed script, which call the import function.
+* However, if the same data is already in the Bank table, subsequent seeding will not duplicate Bank records
+
 ## Welcome
 
 If you are reading this, you probably have interviewed or chatted with someone on the team at Zipmark.  This is our standard "toy" project we normally like to work on together to see how you think about problems, model them, and make decisions.  If you stumbled upon this project randomly and want to give it a shot, please feel free to fork the project and hack away.  We would love to see what you come up with.
