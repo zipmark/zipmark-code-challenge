@@ -1,3 +1,4 @@
+require 'pry'
 require "sinatra/base"
 require "sinatra/reloader"
 require 'json'
@@ -52,3 +53,4 @@ class Banks < Sinatra::Base
 	end
 	run! if app_file == $0	
 end
+
