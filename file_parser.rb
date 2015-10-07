@@ -1,4 +1,3 @@
-require 'pry'
 require "sinatra/base"
 require "sinatra/reloader"
 require 'json'
