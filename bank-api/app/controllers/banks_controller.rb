@@ -1,37 +1,18 @@
 class BanksController < ApplicationController
-  before_action :set_bank, only: [:show, :update, :destroy]
+  before_action :set_bank, only: [:show, :update]
 
-  # GET /banks
-  # GET /banks.json
   def index
-    Bank.parse
-    @banks = Bank.all
+    @banks = Bank.get_data
 
     render json: @banks
   end
 
-  # GET /banks/1
-  # GET /banks/1.json
   def show
     render json: @bank
   end
 
-  # POST /banks
-  # POST /banks.json
-  def create
-    @bank = Bank.new(bank_params)
-
-    if @bank.save
-      render json: @bank, status: :created, location: @bank
-    else
-      render json: @bank.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /banks/1
-  # PATCH/PUT /banks/1.json
   def update
-    @bank = Bank.find(params[:id])
+    @bank = Bank.find(params[:routing_number])
 
     if @bank.update(bank_params)
       head :no_content
@@ -40,18 +21,10 @@ class BanksController < ApplicationController
     end
   end
 
-  # DELETE /banks/1
-  # DELETE /banks/1.json
-  def destroy
-    @bank.destroy
-
-    head :no_content
-  end
-
   private
 
   def set_bank
-    @bank = Bank.find(params[:id])
+    @bank = Bank.find_by(routing_number: params[:routing_number])
   end
 
   def bank_params

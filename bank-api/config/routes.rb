@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :banks, except: [:new, :edit]
+  # resources :banks, except: [:new, :edit, :show, :destroy, :create]
+  get 'banks/' => 'banks#index'
+  get 'banks/:routing_number' => 'banks#show'
+  patch 'banks/:routing_number' => 'banks#update'
+  put 'banks/:routing_number' => 'banks#update'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
