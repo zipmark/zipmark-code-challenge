@@ -10,11 +10,17 @@ Build a small application that fetches and updates the Federal Reserve's current
 
 ## Resources
 
-Bank Data:  http://www.fededirectory.frb.org/FedACHdir.txt
+* [Fedwire Directory File Format](https://www.frbservices.org/EPaymentsDirectory/fedwireFormat.html)
+  * Provides the "rules" for how the bank routing number data file is formatted
 
-Truncated Bank Data: https://gist.github.com/jakehow/3d96b83c4a4a1e6313d4/raw/f2990b4cef86fe9454ba1a643ccee118ca0b5757/truncated_list
+* [Bank Data](https://www.frbservices.org/EPaymentsDirectory/FedACHdir.txt)
+  * Provides a "fixed-width" data set of all banks registered with the Fed
+  * Note: fixed-width semantics can be [found here](http://www.softinterface.com/Convert-XLS/Features/Fixed-Width-Text-File-Definition.htm). You'll want to keep this in mind when thinking of how to parse the data set file
 
-*This is the first 100 lines of the file, much easier to deal with if you are requesting it a lot.
+* [Truncated Bank Data](https://gist.github.com/jakehow/3d96b83c4a4a1e6313d4/raw/f2990b4cef86fe9454ba1a643ccee118ca0b5757/truncated_list)
+  * A subset of the full Bank Data file above
+  * This is the first 100 lines of the file, much easier to deal with if you are requesting it a lot
+
 
 ## Getting Started
 
