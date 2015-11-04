@@ -12,6 +12,13 @@ gem 'pg'
 
 gem 'rspec-rails'
 
+# parse fixed-width data files
+gem 'slither'
+
+gem 'pry'
+
+# be able to render json using views
+# gem 'rabl'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
