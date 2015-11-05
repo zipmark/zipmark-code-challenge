@@ -3,10 +3,7 @@ module FedDataParser
   FED_DATA_ENDPOINT = 'https://www.frbservices.org/EPaymentsDirectory/FedACHdir.txt?AgreementSessionObject=Agree'
 
   def self.update_fed_data
-    return_bank_objects.each do |b|
-      # will call the update_or_create method here
-      b.save
-    end
+    return_bank_objects.each { |b| b.update_or_create! }
   end
 
   private
