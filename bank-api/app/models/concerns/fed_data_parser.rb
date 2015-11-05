@@ -2,11 +2,10 @@ module FedDataParser
   TRUNCATED_FED_DATA_ENDPOINT = 'https://gist.githubusercontent.com/jakehow/3d96b83c4a4a1e6313d4/raw/f2990b4cef86fe9454ba1a643ccee118ca0b5757/truncated_list'
   FED_DATA_ENDPOINT = 'https://www.frbservices.org/EPaymentsDirectory/FedACHdir.txt?AgreementSessionObject=Agree'
 
-  # need method to save objects to database
   def self.update_fed_data
     return_bank_objects.each do |b|
-      # foreach bank, b.write_or_update!
-      binding.pry
+      # will call the update_or_create method here
+      b.save
     end
   end
 

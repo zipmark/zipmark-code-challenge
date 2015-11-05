@@ -22,10 +22,7 @@ class BanksController < ApplicationController
   end
 
   def update_fed_data
-    # data = Net::HTTP.get(URI.parse(Bank::TRUNCATED_FED_DATA_ENDPOINT))
-    # process! method was what matt used for below action
     FedDataParser.update_fed_data
-    binding.pry
   end
 
   private
