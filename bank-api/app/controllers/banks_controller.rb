@@ -2,7 +2,7 @@ class BanksController < ApplicationController
   before_action :set_bank, only: [:show, :update]
 
   def index
-    @banks = Bank.get_data
+    @banks = Bank.all
 
     render json: @banks
   end
@@ -19,6 +19,13 @@ class BanksController < ApplicationController
     else
       render json: @bank.errors, status: :unprocessable_entity
     end
+  end
+
+  def update_fed_data
+    # data = Net::HTTP.get(URI.parse(Bank::TRUNCATED_FED_DATA_ENDPOINT))
+    # process! method was what matt used for below action
+    FedDataParser.update_fed_data
+    binding.pry
   end
 
   private
