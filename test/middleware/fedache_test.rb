@@ -15,18 +15,18 @@ class FedacheTest < ActiveSupport::TestCase
   end
 
   test "first record routing number matches fixture" do
-    assert_equal banks(:one).routing_number, @response.body.first.first
+    assert_equal banks(:one).routing_number, @response.body.first[:routing_number]
   end
 
   test "first record's address matches fixture" do
-    assert_equal banks(:one).address.state, @response.body.first[9]
+    assert_equal banks(:one).address.state, @response.body.first[:state]
   end
 
   test "second record routing number matches fixture" do
-    assert_equal banks(:two).routing_number, @response.body.second.first
+    assert_equal banks(:two).routing_number, @response.body.second[:routing_number]
   end
 
   test "second record's address matches fixture" do
-    assert_equal banks(:two).address.state, @response.body.second[9]
+    assert_equal banks(:two).address.state, @response.body.second[:state]
   end
 end

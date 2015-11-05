@@ -1,18 +1,30 @@
 module FixedLength
   class Parser
-    attr_reader :columns
+    DEFAULT_TYPE = 'a'
 
-    def initialize(columns)
+    attr_reader :columns, :body
+
+    def initialize(columns, body)
       @columns = columns
+      @body = body
     end
 
-    def parse(body)
+    def parse
+      zip unpacked_body
+    end
+
+
+    private
+
+    def unpacked_body
       body.lines.map do |line|
         line.unpack(unpack_format)
       end
     end
 
-    private
+    def zip(unpacked_body)
+      unpacked_body.map { |row| Hash[columns.keys.zip(row)] }
+    end
 
     def unpack_format
       @unpack_format ||= build_unpack_format.join + "*"
@@ -20,7 +32,7 @@ module FixedLength
 
     def build_unpack_format
       columns.map do |_, options|
-        type = options.fetch(:type, 'a')
+        type = options.fetch(:type, DEFAULT_TYPE)
         length = options.fetch(:length)
 
         "#{type}#{length}"

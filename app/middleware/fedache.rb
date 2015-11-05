@@ -24,7 +24,7 @@ class Fedache < FaradayMiddleware::ResponseMiddleware
   column :data_view_code, length: 1
 
   define_parser do |body|
-    FixedLength::Parser.new(columns).parse(body)
+    FixedLength::Parser.new(columns, body).parse
   end
 end
 
