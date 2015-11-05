@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 'FEDERAL RESERVE BANK'
+  routing_number: '011000015'
+  record_type: '1'
+  phone_number: '8662345681'
+  address: one
+
+two:
+  name: 'STATE STREET BANK AND TRUST COMPANY'
+  routing_number: '011000028'
+  record_type: '1'
+  phone_number: '6176642400'
+  address: two

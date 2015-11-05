@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  street: '1000 PEACHTREE ST N.E.'
+  street_2:
+  city: 'ATLANTA'
+  state: 'GA'
+  zip_code: '30309'
+
+two:
+  street: 'JAB2NW'
+  street_2:
+  city: 'N. QUINCY'
+  state: 'MA'
+  zip_code: '02171'
