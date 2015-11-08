@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # resources :banks, except: [:new, :edit, :show, :destroy, :create]
-  get 'banks/update_fed_data' => 'banks#update_fed_data'
+  post 'banks/update_fed_data' => 'banks#update_fed_data'
   get 'banks/' => 'banks#index'
   get 'banks/:routing_number' => 'banks#show'
   patch 'banks/:routing_number' => 'banks#update'
