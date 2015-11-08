@@ -13,10 +13,11 @@ gem 'pg'
 
 gem 'rspec-rails'
 
-# parse fixed-width data files
-gem 'slither'
+# clear syntax for writing and deploying cron jobs
+gem 'whenever', :require => false
 
 gem 'pry'
+
 
 # be able to render json using views
 # gem 'rabl'

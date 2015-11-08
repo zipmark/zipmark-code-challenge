@@ -38,6 +38,7 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
+    chronic (0.10.2)
     coderay (1.1.0)
     diff-lcs (1.2.5)
     domain_name (0.5.24)
@@ -117,7 +118,6 @@ GEM
       rspec-mocks (~> 3.3.0)
       rspec-support (~> 3.3.0)
     rspec-support (3.3.0)
-    slither (0.99.4)
     slop (3.6.0)
     spring (1.4.0)
     sprockets (3.4.0)
@@ -133,6 +133,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
+    whenever (0.9.4)
+      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -144,5 +146,5 @@ DEPENDENCIES
   rails-api
   rest-client
   rspec-rails
-  slither
   spring
+  whenever
