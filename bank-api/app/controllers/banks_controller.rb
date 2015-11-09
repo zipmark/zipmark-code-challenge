@@ -2,7 +2,7 @@ class BanksController < ApplicationController
   before_action :set_bank, only: [:show, :update]
 
   def index
-    @banks = Bank.all
+    @banks = Bank.all.order('updated_at')
 
     render json: @banks
   end
