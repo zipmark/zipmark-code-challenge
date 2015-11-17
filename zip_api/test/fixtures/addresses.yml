@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bank_id: 
+  street: MyString
+  street_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+
+two:
+  bank_id: 
+  street: MyString
+  street_2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
