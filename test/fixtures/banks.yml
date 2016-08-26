@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  routing_number: 1
+  office_code: MyString
+  frb_number: 1
+  record_type_code: 1
+  last_change_date: 2016-08-25 18:21:50
+  new_routing_number: 1
+  customer_name: MyText
+  address: MyText
+  city: MyText
+  state_code: 1
+  zipcode: 1
+  zipcode_ext: 1
+  tel_area_code: 1
+  tel_prefix: 1
+  tel_suffix: 1
+  inst_status_: MyString
+
+two:
+  routing_number: 1
+  office_code: MyString
+  frb_number: 1
+  record_type_code: 1
+  last_change_date: 2016-08-25 18:21:50
+  new_routing_number: 1
+  customer_name: MyText
+  address: MyText
+  city: MyText
+  state_code: 1
+  zipcode: 1
+  zipcode_ext: 1
+  tel_area_code: 1
+  tel_prefix: 1
+  tel_suffix: 1
+  inst_status_: MyString
