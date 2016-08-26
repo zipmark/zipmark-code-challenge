@@ -11,27 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160826120038) do
+ActiveRecord::Schema.define(version: 20160826185127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "banks", force: :cascade do |t|
-    t.integer  "routing_num",       null: false
+    t.string   "routing_num",       null: false
     t.string   "office_code"
     t.integer  "frb_num"
     t.integer  "record_type_code"
     t.datetime "last_change_date"
-    t.integer  "new_routing_num"
+    t.string   "new_routing_num"
     t.text     "cust_name"
     t.text     "address"
     t.text     "city"
     t.string   "state_code"
-    t.integer  "zipcode"
-    t.integer  "zipcode_ext"
-    t.integer  "tel_area_code"
-    t.integer  "tel_prefix"
-    t.integer  "tel_suffix"
+    t.string   "zipcode"
+    t.string   "zipcode_ext"
+    t.string   "tel_area_code"
+    t.string   "tel_prefix"
+    t.string   "tel_suffix"
     t.integer  "inst_status__code"
     t.integer  "data_view_code"
     t.datetime "created_at",        null: false

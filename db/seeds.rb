@@ -19,21 +19,21 @@ end
 
 def parse_bank_data(data)
   data = {
-    routing_num: data[0...9].to_i,
+    routing_num: data[0...9],
     office_code: data[9],
     frb_num: data[10...19].to_i,
     record_type_code: data[19].to_i,
     last_change_date: parse_date(data[20...26]),
-    new_routing_num: data[26...34].to_i,
+    new_routing_num: data[26...34],
     cust_name: trim(data[35...71]),
     address: trim(data[71...107]),
     city: trim(data[107...127]),
     state_code: data[127...129],
-    zipcode: data[129...134].to_i,
-    zipcode_ext: data[134...138].to_i,
-    tel_area_code: data[138...141].to_i,
-    tel_prefix: data[141...144].to_i,
-    tel_suffix: data[144...148].to_i,
+    zipcode: data[129...134],
+    zipcode_ext: data[134...138],
+    tel_area_code: data[138...141],
+    tel_prefix: data[141...144],
+    tel_suffix: data[144...148],
     inst_status__code: data[148].to_i,
     data_view_code: data[149].to_i
   }
