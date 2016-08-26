@@ -11,6 +11,7 @@ json.extract! @bank,
   :frb_num,
   :record_type_code,
   :new_routing_num,
+  :routing_num,
   :cust_name,
   :inst_status__code,
   :data_view_code

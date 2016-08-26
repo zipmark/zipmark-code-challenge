@@ -10,6 +10,9 @@ const BankDisplay = React.createClass({
           Bank: <span>{ bank.cust_name }</span>
         </div>
         <div className="data-field">
+          Routing Number: <span>{ bank.routing_num }</span>
+        </div>
+        <div className="data-field">
           Telephone: <span>{ bank.tel_num }</span>
         </div>
         <div className="data-field">
