@@ -1,6 +1,6 @@
-const AppDispatcher = require("../dispatcher/dispatcher");
-const Constants = require("../constants/constants");
-const BankApiUtil = require("../util/bank_api_util");
+const AppDispatcher = require("dispatcher");
+const Constants = require("constants/constants");
+const BankApiUtil = require("util/bank_api_util");
 
 const Actions = {
 

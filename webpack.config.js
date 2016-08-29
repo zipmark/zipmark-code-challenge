@@ -23,6 +23,9 @@ module.exports = {
   },
   devtool: 'source-maps',
   resolve: {
+    root: [
+      path.resolve('./frontend'),
+    ],
     extensions: ["", ".js", ".jsx" ]
   }
 };

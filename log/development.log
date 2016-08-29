@@ -7579,3 +7579,268 @@ Processing by BanksController#show as */*
   [1m[36mBank Load (0.5ms)[0m  [1mSELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1[0m  [["routing_num", "011000015"]]
   Rendered banks/show.json.jbuilder (1.2ms)
 Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 08:43:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (26.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (1.7ms)
+Completed 200 OK in 974ms (Views: 974.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/bundle.self-950779cab5925505a499d27d1d0eb8795cb6b61aa9e42fafa19afc28f0b89c42.js?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:43:31 -0400
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-29 08:45:18 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[35mBank Load (3.3ms)[0m  SELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (5.4ms)
+Completed 200 OK in 83ms (Views: 21.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 08:45:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/bundle.self-950779cab5925505a499d27d1d0eb8795cb6b61aa9e42fafa19afc28f0b89c42.js?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:45:28 -0400
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-29 08:45:31 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[36mBank Load (0.4ms)[0m  [1mSELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1[0m  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (1.0ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 08:49:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 346ms (Views: 345.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/bundle.self-4772ebe445ab88953bc0978b89762b0264e493ff569a72d26f05be5f2933aa70.js?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:49:05 -0400
+
+
+Started GET "/" for ::1 at 2016-08-29 08:49:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/bundle.self-4772ebe445ab88953bc0978b89762b0264e493ff569a72d26f05be5f2933aa70.js?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:49:06 -0400
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-29 08:49:08 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[35mBank Load (0.4ms)[0m  SELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (0.7ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 08:49:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/bundle.self-4772ebe445ab88953bc0978b89762b0264e493ff569a72d26f05be5f2933aa70.js?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:49:11 -0400
+
+
+Started GET "/banks/" for ::1 at 2016-08-29 08:49:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/banks"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Abramson/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/Abramson/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/Abramson/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/Abramson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendered /Users/Abramson/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.text.erb (25.9ms)
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-29 08:49:15 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[36mBank Load (0.4ms)[0m  [1mSELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1[0m  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (0.7ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 08:52:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 348ms (Views: 348.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/bundle.self-6f7f1fd537b7d1ba645c71e33b9c9a15ee57df776ec0dfd5510d0e61c4a4916b.js?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:52:21 -0400
+
+
+Started GET "/" for ::1 at 2016-08-29 08:52:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.0ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/bundle.self-6f7f1fd537b7d1ba645c71e33b9c9a15ee57df776ec0dfd5510d0e61c4a4916b.js?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-29 08:52:22 -0400
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-29 08:52:24 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[35mBank Load (0.4ms)[0m  SELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (0.6ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.4ms)
