@@ -7,3 +7,4 @@ bundle.js.map
 notes.rb
 .DS_Store
 npm-debug.log
+.byebug_history

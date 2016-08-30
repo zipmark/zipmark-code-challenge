@@ -1,53 +1,42 @@
 const React = require('react');
+const BankDisplyField = require('components/bank_display_field');
 
 const BankDisplay = React.createClass({
+
+  bankFields(){
+    let bank = this.props.data;
+    return {
+      "Bank": bank.cust_name,
+      "Routing Number": bank.routing_num,
+      "Telephone": bank.tel_num,
+      "Address": bank.address.street_address,
+      "City": bank.address.city,
+      "State": bank.address.state,
+      "Zip": bank.address.zipcode,
+      "Zip-ext": bank.address.zipcode_ext,
+      "Record Type": bank.record_type,
+      "Record Type Code": bank.record_type_code,
+      "Servicing FRB Number": bank.frb_num,
+      "New Routing Number": bank.new_routing_num,
+      "Data View Code": bank.data_view_code,
+      "Office Code": bank.office_code,
+      "Date last changed": bank.last_change_date
+    };
+  },
+
+  fieldComponents(){
+    return Object.keys(this.bankFields()).map((field, idx)=>{
+      return (
+          <BankDisplyField key={ idx } label={ field } value={ this.bankFields()[field] }/>
+        );
+    });
+  },
 
   render() {
     let bank = this.props.data;
     return (
       <div className="bank-box">
-        <div className="data-field">
-          Bank: <span>{ bank.cust_name }</span>
-        </div>
-        <div className="data-field">
-          Routing Number: <span>{ bank.routing_num }</span>
-        </div>
-        <div className="data-field">
-          Telephone: <span>{ bank.tel_num }</span>
-        </div>
-        <div className="data-field">
-          Address: <span>{ `${bank.address.street_address}` }</span>
-        </div>
-        <div className="data-field">
-          City: <span>{ `${bank.address.city}` }</span>
-        </div>
-        <div className="data-field">
-          State: <span>{ `${bank.address.state}` }</span>
-        </div>
-        <div className="data-field">
-          Zip: <span>{ `${bank.address.zipcode}` }</span>{"    "}Ext: <span>{ ` ${bank.address.zipcode_ext}` }</span>
-        </div>
-        <div className="data-field">
-          Record Type: <span>{ `${bank.record_type}` }</span>
-        </div>
-        <div className="data-field">
-          Record Type Code: <span>{ `${bank.record_type_code}` }</span>
-        </div>
-        <div className="data-field">
-          Servicing FRB Number: <span>{ `${bank.frb_num}` }</span>
-        </div>
-        <div className="data-field">
-          New Routing Number: <span>{ `${bank.new_routing_num}` }</span>
-        </div>
-        <div className="data-field">
-          Data View Code: <span>{ `${bank.data_view_code}` }</span>
-        </div>
-        <div className="data-field">
-          Office Code: <span>{ `${bank.office_code}` }</span>
-        </div>
-        <div className="data-field">
-          Date last changed: <span>{ `${bank.last_change_date}` }</span>
-        </div>
+        { this.fieldComponents() }
       </div>
     );
   }
