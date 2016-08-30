@@ -8,19 +8,20 @@ const BankDisplay = React.createClass({
     return {
       "Bank": bank.cust_name,
       "Routing Number": bank.routing_num,
-      "Telephone": bank.tel_num,
-      "Address": bank.address.street_address,
-      "City": bank.address.city,
-      "State": bank.address.state,
-      "Zip": bank.address.zipcode,
-      "Zip-ext": bank.address.zipcode_ext,
+      "Telephone": bank.tel_number,
+      "Address": bank.street_address,
+      "City": bank.city,
+      "State": bank.state,
+      "Zip": bank.zipcode,
+      "Zip-ext": bank.zipcode_ext,
       "Record Type": bank.record_type,
       "Record Type Code": bank.record_type_code,
       "Servicing FRB Number": bank.frb_num,
       "New Routing Number": bank.new_routing_num,
       "Data View Code": bank.data_view_code,
       "Office Code": bank.office_code,
-      "Date last changed": bank.last_change_date
+      "Date last changed": bank.last_change_date,
+      "Status Code": bank.inst_status__code
     };
   },
 

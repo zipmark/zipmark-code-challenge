@@ -24,6 +24,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'pry-rails'
 
 gem 'http'
+
+gem 'rspec'
+
+gem 'colorize'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
