@@ -36,6 +36,8 @@ const App = React.createClass({
     let bank = <div style={{"fontStyle":"italic"}}>Enter a routing number</div>;
     if (this.state.bank.cust_name){
       bank = <BankDisplay data={this.state.bank}/>;
+    } else {
+      bank = <div className="error">{this.state.bank.error}</div>;
     }
     return bank;
   },
