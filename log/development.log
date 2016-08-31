@@ -11869,3 +11869,46 @@ Processing by BanksController#show as */*
   [1m[36mBank Load (1.1ms)[0m  [1mSELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1[0m  [["routing_num", "011301646"]]
   Rendered banks/show.json.jbuilder (0.6ms)
 Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-31 12:22:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (5.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (2.6ms)
+Completed 200 OK in 580ms (Views: 580.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-31 12:24:05 -0400
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banks.self-b7946bb756c3ebf44f618e2e0aeb11b499ac2bd718565d1fda1c6bcc7fb76a8d.css?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/banks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/bundle.self-7adb7a031b695aa1496fede981a07d51fa984dec948844a7a8cdbcbbe9b9a9ca.js?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for ::1 at 2016-08-31 12:24:05 -0400
+  [1m[36mBank Load (4.6ms)[0m  [1mSELECT  "banks".* FROM "banks"  ORDER BY "banks"."id" ASC LIMIT 1[0m
+
+
+Started GET "/banks/011000015" for ::1 at 2016-08-31 12:24:28 -0400
+Processing by BanksController#show as */*
+  Parameters: {"id"=>"011000015"}
+  [1m[35mBank Load (0.9ms)[0m  SELECT  "banks".* FROM "banks" WHERE "banks"."routing_num" = $1 LIMIT 1  [["routing_num", "011000015"]]
+  Rendered banks/show.json.jbuilder (3.9ms)
+Completed 200 OK in 52ms (Views: 19.9ms | ActiveRecord: 6.0ms)
