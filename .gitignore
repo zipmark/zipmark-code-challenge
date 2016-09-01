@@ -1,0 +1,10 @@
+node_modules/
+bundle.js
+bundle.js.map
+*tmp
+/tmp
+*sprockets
+notes.rb
+.DS_Store
+npm-debug.log
+.byebug_history
