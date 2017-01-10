@@ -1,3 +1,24 @@
+## Badges
+
+[![Build Status](https://travis-ci.org/rolentle/zipmark-code-challenge.png?branch=master)](https://travis-ci.org/rolentle/zipmark-code-challenge)
+[![Coverage Status](https://coveralls.io/repos/rolentle/zipmark-code-challenge/badge.png)](https://coveralls.io/r/rolentle/zipmark-code-challenge)
+[![Code Climate](https://codeclimate.com/github/rolentle/zipmark-code-challenge.png)](https://codeclimate.com/github/rolentle/zipmark-code-challenge)
+
+## Rolen Notes
+
+### Features Finshed
+
+* Api endpoints at '/banks/:routing_number' see `curl http://rolen-zipmark.herokuapp.com/banks/011000015` as an example.
+* Deployed to [Heroku](http://rolen-zipmark.herokuapp.com/).
+* Created a rake task `rake fedach:update` that could be added to heroku scheduler to update the data.
+* Created a search engine as the root page.
+
+### Room For Improvements
+
+* extract the file parser and writer as workers via resque.
+* make api endpoints for the workers to hit so they don't have to use active record.
+* install the whenever gem in lieu of heroku scheduler.
+
 ## Welcome
 
 If you are reading this, you probably have interviewed or chatted with someone on the team at Zipmark.  This is our standard "toy" project we normally like to work on together to see how you think about problems, model them, and make decisions.  If you stumbled upon this project randomly and want to give it a shot, please feel free to fork the project and hack away.  We would love to see what you come up with.
